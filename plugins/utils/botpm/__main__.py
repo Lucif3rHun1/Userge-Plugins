@@ -128,7 +128,7 @@ if userge.has_bot:
                 _USERS.append(user_id)
                 await USERS.insert_one({"user_id": user_id})
             copy_ = "https://github.com/UsergeTeam/Userge/blob/master/LICENSE"
-            await send_start_text(msg, text, path, markup)
+            await send_start_text(msg, text, path)
             return
         text = "Hey, you can configure me here."
         markup = InlineKeyboardMarkup([[InlineKeyboardButton("Settings", callback_data="stngs")]])
